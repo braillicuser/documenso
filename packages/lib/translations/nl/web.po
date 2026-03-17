@@ -8,7 +8,7 @@ msgstr ""
 "Language: nl\n"
 "Project-Id-Version: documenso-app\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-03-13 04:15\n"
+"PO-Revision-Date: 2026-03-17 02:59\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -718,6 +718,18 @@ msgstr "<0>Geen</0> - We genereren links die je handmatig naar de ontvangers kun
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 msgid "<0>Note</0> - If you use Links in combination with direct templates, you will need to manually send the links to the remaining recipients."
 msgstr "<0>Let op</0> - Als je Links gebruikt in combinatie met directe sjablonen, moet je de links handmatig naar de overige ontvangers sturen."
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Organisation</0> templates are shared across all teams in your organisation but can only be edited by the owning team."
+msgstr "<0>Organisatie</0>-sjablonen worden gedeeld met alle teams in je organisatie, maar kunnen alleen worden bewerkt door het eigenaarsteam."
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Private</0> templates can only be used by your team."
+msgstr "<0>Privé</0>-sjablonen kunnen alleen door je team worden gebruikt."
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Public</0> templates are linked to your public profile."
+msgstr "<0>Openbare</0>-sjablonen zijn gekoppeld aan je openbare profiel."
 
 #: packages/ui/components/document/document-global-auth-action-select.tsx
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
@@ -6648,6 +6660,10 @@ msgstr "Geen leden geselecteerd"
 msgid "No organisation members available"
 msgstr "Geen organisatieleden beschikbaar"
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
+msgid "No organisation templates are shared with your team yet."
+msgstr "Er worden nog geen organisatiesjablonen met je team gedeeld."
+
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "No organisations found"
 msgstr "Geen organisaties gevonden"
@@ -6911,13 +6927,17 @@ msgstr "OF"
 msgid "Or continue with"
 msgstr "Of ga verder met"
 
+#: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
+#: apps/remix/app/components/tables/templates-table.tsx
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains._index.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Organisation"
 msgstr "Organisatie"
 
@@ -7011,6 +7031,14 @@ msgstr "SSO-portaal van organisatie"
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 msgid "Organisation Teams"
 msgstr "Organisatieteams"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-header.tsx
+msgid "Organisation Template"
+msgstr "Organisatiesjabloon"
+
+#: apps/remix/app/components/tables/templates-table.tsx
+msgid "Organisation templates are shared across all teams within the same organisation. Only the owning team can edit them."
+msgstr "Organisatiesjablonen worden gedeeld tussen alle teams binnen dezelfde organisatie. Alleen het eigenaarsteam kan ze bewerken."
 
 #: apps/remix/app/components/forms/organisation-update-form.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
@@ -7567,6 +7595,7 @@ msgstr "Bekijk een voorbeeld van hoe het ondertekende document eruitziet met pla
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Private"
 msgstr "Privé"
 
@@ -7620,6 +7649,7 @@ msgstr "Provider is succesvol bijgewerkt"
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Public"
 msgstr "Openbaar"
 
@@ -9001,8 +9031,8 @@ msgid "Signing window expired for {0}"
 msgstr "Ondertekenvenster verlopen voor {0}"
 
 #: apps/remix/app/components/forms/signup.tsx
-msgid "Signups are disabled."
-msgstr "Aanmeldingen zijn uitgeschakeld."
+msgid "Signup is currently disabled or not available for your email domain."
+msgstr "Registratie is momenteel uitgeschakeld of niet beschikbaar voor jouw e‑maildomein."
 
 #. placeholder {0}: DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL ‘yy')
 #: apps/remix/app/routes/_profile+/p.$url.tsx
@@ -9401,6 +9431,7 @@ msgstr "Doelorganisatie"
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 msgid "Team"
 msgstr "Team"
 
@@ -9620,6 +9651,11 @@ msgstr "Sjablooninstellingen"
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 msgid "Template title"
 msgstr "Titel sjabloon"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+msgid "Template type"
+msgstr "Sjabloontype"
 
 #: apps/remix/app/routes/embed+/v2+/authoring+/envelope.edit.$id.tsx
 msgid "Template Updated"
@@ -11388,6 +11424,10 @@ msgstr "Meer bekijken"
 msgid "View next document"
 msgstr "Volgend document bekijken"
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx
+msgid "View organisation template"
+msgstr "Organisatiesjabloon bekijken"
+
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 msgid "View owner"
 msgstr "Bekijk eigenaar"
@@ -12094,6 +12134,20 @@ msgstr "Je staat op het punt je te abonneren op de {planName}"
 msgid "You are currently on the <0>Free Plan</0>."
 msgstr "Je zit momenteel in het <0>Gratis abonnement</0>."
 
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to automatically renew on <1>{0}</1>."
+msgstr "U hebt momenteel een abonnement op <0>{currentProductName}</0> dat automatisch wordt verlengd op <1>{0}</1>."
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to end on <1>{0}</1>."
+msgstr "U hebt momenteel een abonnement op <0>{currentProductName}</0> dat afloopt op <1>{0}</1>."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0>."
+msgstr "U hebt momenteel een abonnement op <0>{currentProductName}</0>."
+
 #. placeholder {0}: organisationEmail.email
 #: apps/remix/app/components/dialogs/organisation-email-update-dialog.tsx
 msgid "You are currently updating <0>{0}</0>"
@@ -12260,9 +12314,23 @@ msgstr "Je hebt een envelopitem aangemaakt met de titel {0}"
 msgid "You created the document"
 msgstr "Je hebt het document aangemaakt"
 
+#. placeholder {0}: i18n.date(periodEnd)
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
-msgid "You currently have an inactive <0>{currentProductName}</0> subscription"
-msgstr "Je hebt momenteel een inactief {currentProductName}-abonnement"
+msgid "You currently have an active plan which is set to automatically renew on <0>{0}</0>."
+msgstr "U hebt momenteel een actief abonnement dat automatisch wordt verlengd op <0>{0}</0>."
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan which is set to end on <0>{0}</0>."
+msgstr "U hebt momenteel een actief abonnement dat afloopt op <0>{0}</0>."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan."
+msgstr "U hebt momenteel een actief abonnement."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an inactive <0>{currentProductName}</0> subscription."
+msgstr "U hebt momenteel een inactief <0>{currentProductName}</0>-abonnement."
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl._index.tsx
 msgid "You currently have no access to any teams within this organisation. Please contact your organisation to request access."
