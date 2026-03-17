@@ -714,6 +714,18 @@ msgstr "<0>Nenhum</0> - Geraremos links que você pode enviar aos destinatários
 msgid "<0>Note</0> - If you use Links in combination with direct templates, you will need to manually send the links to the remaining recipients."
 msgstr "<0>Nota</0> - Se você usar Links em combinação com modelos diretos, precisará enviar manualmente os links para os destinatários restantes."
 
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Organisation</0> templates are shared across all teams in your organisation but can only be edited by the owning team."
+msgstr ""
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Private</0> templates can only be used by your team."
+msgstr ""
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Public</0> templates are linked to your public profile."
+msgstr ""
+
 #: packages/ui/components/document/document-global-auth-action-select.tsx
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
 msgid "<0>Require 2FA</0> - The recipient must have an account and 2FA enabled via their settings"
@@ -3823,7 +3835,7 @@ msgid "Document created by <0>{0}</0>"
 msgstr "Documento criado por <0>{0}</0>"
 
 #: packages/email/templates/document-created-from-direct-template.tsx
-#: packages/lib/server-only/template/create-document-from-direct-template.ts
+#: packages/lib/jobs/definitions/emails/send-document-created-from-direct-template-email.handler.ts
 msgid "Document created from direct template"
 msgstr "Documento criado a partir de modelo direto"
 
@@ -6643,6 +6655,10 @@ msgstr ""
 msgid "No organisation members available"
 msgstr ""
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
+msgid "No organisation templates are shared with your team yet."
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "No organisations found"
 msgstr "Nenhuma organização encontrada"
@@ -6906,13 +6922,17 @@ msgstr "OU"
 msgid "Or continue with"
 msgstr "Ou continue com"
 
+#: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
+#: apps/remix/app/components/tables/templates-table.tsx
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains._index.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Organisation"
 msgstr "Organização"
 
@@ -7006,6 +7026,14 @@ msgstr "Portal SSO da Organização"
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 msgid "Organisation Teams"
 msgstr "Equipes da Organização"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-header.tsx
+msgid "Organisation Template"
+msgstr ""
+
+#: apps/remix/app/components/tables/templates-table.tsx
+msgid "Organisation templates are shared across all teams within the same organisation. Only the owning team can edit them."
+msgstr ""
 
 #: apps/remix/app/components/forms/organisation-update-form.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
@@ -7562,6 +7590,7 @@ msgstr "Visualize como o documento assinado ficará com dados de exemplo"
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Private"
 msgstr "Privado"
 
@@ -7615,6 +7644,7 @@ msgstr "O provedor foi atualizado com sucesso"
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Public"
 msgstr "Público"
 
@@ -8996,8 +9026,8 @@ msgid "Signing window expired for {0}"
 msgstr ""
 
 #: apps/remix/app/components/forms/signup.tsx
-msgid "Signups are disabled."
-msgstr "Inscrições estão desativadas."
+msgid "Signup is currently disabled or not available for your email domain."
+msgstr ""
 
 #. placeholder {0}: DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL ‘yy')
 #: apps/remix/app/routes/_profile+/p.$url.tsx
@@ -9396,6 +9426,7 @@ msgstr ""
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 msgid "Team"
 msgstr "Equipe"
 
@@ -9615,6 +9646,11 @@ msgstr "Configurações do Modelo"
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 msgid "Template title"
 msgstr "Título do modelo"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+msgid "Template type"
+msgstr ""
 
 #: apps/remix/app/routes/embed+/v2+/authoring+/envelope.edit.$id.tsx
 msgid "Template Updated"
@@ -11383,6 +11419,10 @@ msgstr "Ver mais"
 msgid "View next document"
 msgstr "Visualizar próximo documento"
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx
+msgid "View organisation template"
+msgstr ""
+
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 msgid "View owner"
 msgstr "Visualizar proprietário"
@@ -11849,8 +11889,8 @@ msgid "Webhook not found"
 msgstr "Webhook não encontrado"
 
 #: apps/remix/app/components/general/webhook-logs-sheet.tsx
-msgid "Webhook successfully sent"
-msgstr "Webhook enviado com sucesso"
+msgid "Webhook queued for resend"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
 msgid "Webhook updated"
@@ -12089,6 +12129,20 @@ msgstr "Você está prestes a assinar o {planName}"
 msgid "You are currently on the <0>Free Plan</0>."
 msgstr "Você está atualmente no <0>Plano Gratuito</0>."
 
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to automatically renew on <1>{0}</1>."
+msgstr ""
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to end on <1>{0}</1>."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0>."
+msgstr ""
+
 #. placeholder {0}: organisationEmail.email
 #: apps/remix/app/components/dialogs/organisation-email-update-dialog.tsx
 msgid "You are currently updating <0>{0}</0>"
@@ -12255,9 +12309,23 @@ msgstr ""
 msgid "You created the document"
 msgstr ""
 
+#. placeholder {0}: i18n.date(periodEnd)
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
-msgid "You currently have an inactive <0>{currentProductName}</0> subscription"
-msgstr "Você tem atualmente uma assinatura <0>{currentProductName}</0> inativa"
+msgid "You currently have an active plan which is set to automatically renew on <0>{0}</0>."
+msgstr ""
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan which is set to end on <0>{0}</0>."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an inactive <0>{currentProductName}</0> subscription."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl._index.tsx
 msgid "You currently have no access to any teams within this organisation. Please contact your organisation to request access."

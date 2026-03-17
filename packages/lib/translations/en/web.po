@@ -714,6 +714,18 @@ msgstr "<0>None</0> - We will generate links which you can send to the recipient
 msgid "<0>Note</0> - If you use Links in combination with direct templates, you will need to manually send the links to the remaining recipients."
 msgstr "<0>Note</0> - If you use Links in combination with direct templates, you will need to manually send the links to the remaining recipients."
 
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Organisation</0> templates are shared across all teams in your organisation but can only be edited by the owning team."
+msgstr "<0>Organisation</0> templates are shared across all teams in your organisation but can only be edited by the owning team."
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Private</0> templates can only be used by your team."
+msgstr "<0>Private</0> templates can only be used by your team."
+
+#: packages/ui/components/template/template-type-select.tsx
+msgid "<0>Public</0> templates are linked to your public profile."
+msgstr "<0>Public</0> templates are linked to your public profile."
+
 #: packages/ui/components/document/document-global-auth-action-select.tsx
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
 msgid "<0>Require 2FA</0> - The recipient must have an account and 2FA enabled via their settings"
@@ -3823,7 +3835,7 @@ msgid "Document created by <0>{0}</0>"
 msgstr "Document created by <0>{0}</0>"
 
 #: packages/email/templates/document-created-from-direct-template.tsx
-#: packages/lib/server-only/template/create-document-from-direct-template.ts
+#: packages/lib/jobs/definitions/emails/send-document-created-from-direct-template-email.handler.ts
 msgid "Document created from direct template"
 msgstr "Document created from direct template"
 
@@ -6643,6 +6655,10 @@ msgstr "No members selected"
 msgid "No organisation members available"
 msgstr "No organisation members available"
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
+msgid "No organisation templates are shared with your team yet."
+msgstr "No organisation templates are shared with your team yet."
+
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "No organisations found"
 msgstr "No organisations found"
@@ -6906,13 +6922,17 @@ msgstr "OR"
 msgid "Or continue with"
 msgstr "Or continue with"
 
+#: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
+#: apps/remix/app/components/tables/templates-table.tsx
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains._index.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Organisation"
 msgstr "Organisation"
 
@@ -7006,6 +7026,14 @@ msgstr "Organisation SSO Portal"
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 msgid "Organisation Teams"
 msgstr "Organisation Teams"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-header.tsx
+msgid "Organisation Template"
+msgstr "Organisation Template"
+
+#: apps/remix/app/components/tables/templates-table.tsx
+msgid "Organisation templates are shared across all teams within the same organisation. Only the owning team can edit them."
+msgstr "Organisation templates are shared across all teams within the same organisation. Only the owning team can edit them."
 
 #: apps/remix/app/components/forms/organisation-update-form.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
@@ -7562,6 +7590,7 @@ msgstr "Preview what the signed document will look like with placeholder data"
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Private"
 msgstr "Private"
 
@@ -7615,6 +7644,7 @@ msgstr "Provider has been updated successfully"
 
 #: apps/remix/app/components/general/template/template-type.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
+#: packages/ui/components/template/template-type-select.tsx
 msgid "Public"
 msgstr "Public"
 
@@ -8996,8 +9026,8 @@ msgid "Signing window expired for {0}"
 msgstr "Signing window expired for {0}"
 
 #: apps/remix/app/components/forms/signup.tsx
-msgid "Signups are disabled."
-msgstr "Signups are disabled."
+msgid "Signup is currently disabled or not available for your email domain."
+msgstr "Signup is currently disabled or not available for your email domain."
 
 #. placeholder {0}: DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL ‘yy')
 #: apps/remix/app/routes/_profile+/p.$url.tsx
@@ -9396,6 +9426,7 @@ msgstr "Target Organisation"
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx
 msgid "Team"
 msgstr "Team"
 
@@ -9615,6 +9646,11 @@ msgstr "Template Settings"
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 msgid "Template title"
 msgstr "Template title"
+
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+msgid "Template type"
+msgstr "Template type"
 
 #: apps/remix/app/routes/embed+/v2+/authoring+/envelope.edit.$id.tsx
 msgid "Template Updated"
@@ -11383,6 +11419,10 @@ msgstr "View more"
 msgid "View next document"
 msgstr "View next document"
 
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx
+msgid "View organisation template"
+msgstr "View organisation template"
+
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 msgid "View owner"
 msgstr "View owner"
@@ -11849,8 +11889,8 @@ msgid "Webhook not found"
 msgstr "Webhook not found"
 
 #: apps/remix/app/components/general/webhook-logs-sheet.tsx
-msgid "Webhook successfully sent"
-msgstr "Webhook successfully sent"
+msgid "Webhook queued for resend"
+msgstr "Webhook queued for resend"
 
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
 msgid "Webhook updated"
@@ -12089,6 +12129,20 @@ msgstr "You are about to subscribe to the {planName}"
 msgid "You are currently on the <0>Free Plan</0>."
 msgstr "You are currently on the <0>Free Plan</0>."
 
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to automatically renew on <1>{0}</1>."
+msgstr "You are currently subscribed to <0>{currentProductName}</0> which is set to automatically renew on <1>{0}</1>."
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0> which is set to end on <1>{0}</1>."
+msgstr "You are currently subscribed to <0>{currentProductName}</0> which is set to end on <1>{0}</1>."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You are currently subscribed to <0>{currentProductName}</0>."
+msgstr "You are currently subscribed to <0>{currentProductName}</0>."
+
 #. placeholder {0}: organisationEmail.email
 #: apps/remix/app/components/dialogs/organisation-email-update-dialog.tsx
 msgid "You are currently updating <0>{0}</0>"
@@ -12255,9 +12309,23 @@ msgstr "You created an envelope item with title {0}"
 msgid "You created the document"
 msgstr "You created the document"
 
+#. placeholder {0}: i18n.date(periodEnd)
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
-msgid "You currently have an inactive <0>{currentProductName}</0> subscription"
-msgstr "You currently have an inactive <0>{currentProductName}</0> subscription"
+msgid "You currently have an active plan which is set to automatically renew on <0>{0}</0>."
+msgstr "You currently have an active plan which is set to automatically renew on <0>{0}</0>."
+
+#. placeholder {0}: i18n.date(periodEnd)
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan which is set to end on <0>{0}</0>."
+msgstr "You currently have an active plan which is set to end on <0>{0}</0>."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an active plan."
+msgstr "You currently have an active plan."
+
+#: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
+msgid "You currently have an inactive <0>{currentProductName}</0> subscription."
+msgstr "You currently have an inactive <0>{currentProductName}</0> subscription."
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl._index.tsx
 msgid "You currently have no access to any teams within this organisation. Please contact your organisation to request access."
